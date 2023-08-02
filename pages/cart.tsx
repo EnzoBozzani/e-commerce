@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import Header from '../src/components/Header';
 
 const Cart: NextPage = () => {
   return (
@@ -8,6 +9,7 @@ const Cart: NextPage = () => {
         <title>Carrinho</title>
         <meta name="description" content="Meu carrinho de compras" />
       </Head>
+      <Header/>
       <h1>
         Carrinho
       </h1>
