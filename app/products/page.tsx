@@ -1,16 +1,21 @@
-import { NextPage } from "next";
-import Head from 'next/head'
+import { Metadata, NextPage } from 'next';
+import { Header, ProductContainer } from '@/src/components'
+import { fetchProducts, ProductType } from '@/src/services/products';
 
-const Products: NextPage = () => {
+export const metadata: Metadata = {
+  title: 'Nossos Produtos',
+  description: 'Conheça todos os nossos produtos',
+}
+
+const Products: NextPage = async () => {
+  const products: ProductType[] = await fetchProducts();
   return (
     <>
-      <Head>
-        <title>Nossos Produtos</title>
-        <meta name="description" content="Conheça todos os nossos produtos" />
-      </Head>
-      <h1>
-        Nossos Produtos
-      </h1>
+      <Header />
+
+      <main>
+        <ProductContainer products={products}/>
+      </main>
     </>
   )
 }

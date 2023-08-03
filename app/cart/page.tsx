@@ -1,13 +1,15 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
+import { Header } from '@/src/components';
+import { Metadata, NextPage } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Carrinho',
+  description: 'Meu carrinho de compras',
+}
 
 const Cart: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Carrinho</title>
-        <meta name="description" content="Meu carrinho de compras" />
-      </Head>
+      <Header />
       <h1>
         Carrinho
       </h1>
@@ -15,4 +17,4 @@ const Cart: NextPage = () => {
   )
 }
 
-export default Cart
+export default Cart;
