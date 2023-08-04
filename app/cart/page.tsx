@@ -1,18 +1,19 @@
 import { Header } from '@/src/components';
+import { CartContainer } from '@/src/components/CartContainer';
 import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
   title: 'Carrinho',
-  description: 'Meu carrinho de compras',
+  description: 'My Cart',
 }
 
 const Cart: NextPage = () => {
   return (
     <>
       <Header />
-      <h1>
-        Carrinho
-      </h1>
+      <main>
+        <CartContainer/ >
+      </main>
     </>
   )
 }

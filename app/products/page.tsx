@@ -4,7 +4,7 @@ import { fetchProducts, ProductType } from '@/src/services/products';
 
 export const metadata: Metadata = {
   title: 'Nossos Produtos',
-  description: 'Conheça todos os nossos produtos',
+  description: 'Come and see our products!',
 }
 
 const Products: NextPage = async () => {

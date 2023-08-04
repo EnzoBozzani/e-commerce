@@ -5,13 +5,15 @@ import React, { useState } from "react";
 import { Button, Col, Container, Row } from "reactstrap";
 import { ProductType } from "../services/products";
 import SuccessToast from "./SuccessToast";
+import { useCart } from "../hooks/useCart";
 
 type ProductDetailsProps = {
     product: ProductType
 }
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
-    const [toastIsOpen, setToastIsOpen] = useState(false)
+    const [toastIsOpen, setToastIsOpen] = useState(false);
+    const { addProduct } = useCart();
 
     return (
         <Container className="mt-5">
@@ -41,6 +43,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                         color="dark"
                         className="my-3 pb-2"
                         onClick={() => {
+                            addProduct(product);
                             setToastIsOpen(true)
                             setTimeout(() => setToastIsOpen(false), 1000 * 3)
                         }}
