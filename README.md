@@ -33,9 +33,9 @@
 <br>
 :warning: ReactStrap
 
-![Alt text](<Captura de Tela 2023-09-18 às 23.11.11.png>)
+![Alt text](./public/img1.png)
 
-![Alt text](image.png)
+![Alt text](./public/img2.png)
 
 ## Run application:
 
